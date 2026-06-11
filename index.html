@@ -3,23 +3,36 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Teh Xue En e-Portfolio</title>
+<title>Teh Xue En | e-Portfolio</title>
 
 <style>
 body {
     margin: 0;
-    font-family: Arial, sans-serif;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: linear-gradient(to right, #e8f5e9, #f1f8e9);
     scroll-behavior: smooth;
-    background: #f4f8f4;
+    color: #2e2e2e;
 }
 
+/* HEADER */
 header {
-    background: #2e7d32;
+    background: linear-gradient(135deg, #2e7d32, #1b5e20);
     color: white;
-    padding: 20px;
     text-align: center;
+    padding: 40px 20px;
 }
 
+header h1 {
+    margin: 0;
+    font-size: 34px;
+}
+
+header p {
+    margin-top: 10px;
+    opacity: 0.9;
+}
+
+/* NAV */
 nav {
     position: sticky;
     top: 0;
@@ -27,56 +40,77 @@ nav {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
+    z-index: 1000;
 }
 
 nav a {
     color: white;
-    padding: 14px 20px;
+    padding: 14px 18px;
     text-decoration: none;
     font-weight: bold;
+    transition: 0.3s;
 }
 
 nav a:hover {
     background: #66bb6a;
+    border-radius: 5px;
 }
 
+/* SECTIONS */
 section {
-    padding: 40px;
-    max-width: 1000px;
+    padding: 50px 20px;
+    max-width: 1100px;
     margin: auto;
 }
 
+h2 {
+    color: #1b5e20;
+    border-left: 5px solid #66bb6a;
+    padding-left: 10px;
+}
+
+/* CARD */
 .card {
     background: white;
     padding: 20px;
     margin: 20px 0;
-    border-radius: 10px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
 }
 
+.card:hover {
+    transform: translateY(-5px);
+}
+
+/* VIDEO */
 iframe {
     width: 100%;
-    height: 300px;
+    height: 320px;
     border-radius: 10px;
+    margin-top: 10px;
 }
 
+/* BUTTON */
 button {
     background: #2e7d32;
     color: white;
     border: none;
     padding: 10px 15px;
-    border-radius: 5px;
+    border-radius: 6px;
     cursor: pointer;
+    margin-top: 10px;
 }
 
 button:hover {
     background: #1b5e20;
 }
 
+/* FOOTER */
 footer {
     text-align: center;
-    padding: 20px;
-    background: #2e7d32;
+    padding: 25px;
+    background: #1b5e20;
     color: white;
 }
 </style>
@@ -85,8 +119,8 @@ footer {
 <body>
 
 <header>
-    <h1>Teh Xue En e-Portfolio</h1>
-    <p>Mobile Programming (TTTM2213)</p>
+    <h1>Teh Xue En</h1>
+    <p>Mobile Programming e-Portfolio | TTTM2213</p>
 </header>
 
 <nav>
@@ -95,59 +129,65 @@ footer {
     <a href="#projects">Projects</a>
     <a href="#reflection">Reflection</a>
     <a href="#skills">Skills</a>
+    <a href="#resources">Resources</a>
 </nav>
 
+<!-- HOME -->
 <section id="home">
-    <h2>Home</h2>
+    <h2>About Me</h2>
     <div class="card">
         <p><b>Name:</b> Teh Xue En</p>
         <p><b>Matric:</b> A208467</p>
-        <p><b>Programme:</b> TTTM2213 Pengaturcaraan Aplikasi Mudah Alih</p>
+        <p><b>Programme:</b> TTTM2213 Mobile Application Programming</p>
         <p><b>Instructor:</b> Dr. Nazatul</p>
-        <p><b>SDG:</b> SDG 2: Zero Hunger</p>
-        <p>Improving nutrition awareness through mobile technology.</p>
+        <p><b>SDG:</b> SDG 2 - Zero Hunger</p>
+        <p>Improving nutrition awareness through mobile technology and helping users maintain healthy eating habits.</p>
     </div>
 </section>
 
+<!-- LABS -->
 <section id="labs">
     <h2>Labs</h2>
 
     <div class="card">
-        <h3>Lab 1 - UI</h3>
+        <h3>Lab 1 - UI Design</h3>
         <iframe src="https://www.youtube.com/embed/N5qM0k8Zo5A"></iframe>
+        <p><b>Reflection:</b> I learned the basics of UI design using Jetpack Compose and how layout structure affects user experience and interface clarity.</p>
     </div>
 
     <div class="card">
         <h3>Lab 2 - Interaction</h3>
         <iframe src="https://www.youtube.com/embed/ccnSEB_K4d4"></iframe>
+        <p><b>Reflection:</b> I learned how to handle user input and implement interactive features such as button clicks and text input validation.</p>
     </div>
 
     <div class="card">
         <h3>Lab 3 - Material Design</h3>
         <iframe src="https://www.youtube.com/embed/kyTIGfKDHFo"></iframe>
+        <p><b>Reflection:</b> I learned how Material Design improves UI consistency, making apps more modern and user-friendly.</p>
     </div>
 
     <div class="card">
         <h3>Lab 4 - Navigation</h3>
         <iframe src="https://www.youtube.com/embed/H_ZniMEHJJM"></iframe>
+        <p><b>Reflection:</b> I learned how to navigate between screens and manage data flow in multi-page Android applications.</p>
     </div>
 
     <div class="card">
         <h3>Lab 5 - Room Database</h3>
         <iframe src="https://www.youtube.com/embed/eks6s3jRNuM"></iframe>
+        <p><b>Reflection:</b> I learned how to store and manage local data using Room Database for persistent mobile application storage.</p>
     </div>
 </section>
 
+<!-- PROJECTS -->
 <section id="projects">
     <h2>Projects</h2>
 
     <div class="card">
         <h3>Project 1 - NutriTrack</h3>
-        <p>Helps users track nutrition intake and improve healthy eating habits.</p>
-
         <iframe src="https://www.youtube.com/embed/0xf6W4w-OsI"></iframe>
-
-        <br><br>
+        <p><b>Reflection:</b> This project helped me combine UI design and logic to build a functional nutrition tracking application.</p>
         <a href="https://github.com/a208467/mobile-project-1" target="_blank">
             <button>View on GitHub</button>
         </a>
@@ -155,27 +195,25 @@ footer {
 
     <div class="card">
         <h3>Project 2 - NutriTrack Advanced</h3>
-        <p>Enhanced version with Room Database, APIs, sensors, and cloud features.</p>
-
         <iframe src="https://www.youtube.com/embed/1feqt60TeIg" allowfullscreen></iframe>
-
-        <br><br>
-
+        <p><b>Reflection:</b> This project improved my ability to integrate advanced features like APIs, sensors, and cloud services in a mobile application.</p>
         <a href="https://github.com/a208467/mobile-project-2" target="_blank">
             <button>View on GitHub</button>
         </a>
     </div>
 </section>
 
+<!-- OVERALL REFLECTION -->
 <section id="reflection">
-    <h2>Reflection</h2>
+    <h2>Overall Reflection</h2>
     <div class="card">
         <p>
-        Throughout this course, I learned how to develop Android applications using Kotlin and Jetpack Compose. Starting from basic UI design in Lab 1, I gradually learned interaction, Material Design, navigation, and Room Database. Through Project 1 and Project 2, I gained experience building full mobile applications and integrating advanced features such as APIs and cloud services. This course improved my technical and problem-solving skills in mobile development.
+        Throughout this course, I gained strong knowledge in mobile application development using Kotlin and Jetpack Compose. I progressed from basic UI design to advanced topics such as navigation, database management, APIs, and cloud integration. This journey improved my technical skills, problem-solving ability, and confidence in developing real-world mobile applications.
         </p>
     </div>
 </section>
 
+<!-- SKILLS -->
 <section id="skills">
     <h2>Skills</h2>
     <div class="card">
@@ -187,6 +225,17 @@ footer {
         <p>Firebase</p>
         <p>Material Design</p>
         <p>GitHub</p>
+    </div>
+</section>
+
+<!-- RESOURCES -->
+<section id="resources">
+    <h2>Resources</h2>
+    <div class="card">
+        <p><b>Tools:</b> Android Studio, GitHub, Firebase</p>
+        <p><b>Libraries:</b> Retrofit, Room Database, Jetpack Compose</p>
+        <p><b>APIs:</b> REST API integration for mobile data handling</p>
+        <p><b>Acknowledgement:</b> AI assistance used for structuring and improving layout design.</p>
     </div>
 </section>
 
